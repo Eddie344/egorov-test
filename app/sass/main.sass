@@ -1,0 +1,278 @@
+@import vars
+@import fonts
+@import libs
+
+body
+	font-family: "Open Sans", sans-serif
+	font-size: 20px
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+.container
+	max-width: 1530px
+	padding-right: $gutter/2
+	padding-left: $gutter/2
+	margin-left: auto
+	margin-right: auto
+	@include media-breakpoint-down(sm)
+		padding-right: 20px
+		padding-left: 20px
+
+.h2
+	font-weight: bold
+	font-size: 50px
+	line-height: 110%
+	max-width: 730px
+	margin-bottom: 50px
+	@include media-breakpoint-down(sm)
+		font-size: 28px
+
+.h3
+	font-weight: bold
+	font-size: 24px
+	line-height: 100%
+.btn
+	display: inline-block
+	font-weight: 700
+	font-size: 24px
+	line-height: 100%
+	background-color: #d43338
+	border-radius: 15px
+	text-decoration: none
+	color: #fff
+	padding: 20px 30px
+	margin-bottom: 92px
+	transition: background-color 0.3s ease
+	&:hover
+		background-color: #942427
+		text-decoration: none
+		color: #fff
+	span
+		margin-right: 125px
+	@include media-breakpoint-down(xs)
+		width: 100%
+		span
+			margin: 0
+
+.btn-icon
+	background-image: url("../img/left-arrow.svg")
+	width: 30px
+	height: 30px
+	display: block
+	float: right
+
+.all-news-icon
+	background-image: url("../img/left-arrow-dark.svg")
+	width: 30px
+	height: 30px
+	display: block
+	float: right
+	background-repeat: no-repeat
+	background-position: center center
+
+.header
+	position: relative
+	background-image: url("../img/header-bg.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	color: #fff
+
+.header-inner
+	padding-top: 70px
+	padding-bottom: 150px
+	z-index: 2
+	@include media-breakpoint-down(lg)
+		padding-top: 130px
+		padding-bottom: 70px
+
+.header-main
+	padding-top: 130px
+
+.card
+	background: rgba(71, 93, 126, 0.7)
+	backdrop-filter: blur(20px)
+	border-radius: 15px
+	padding: 50px 65px
+	position: relative
+	margin-bottom: 70px
+	&::before
+		content: ""
+		position: absolute
+		background-color: #fff
+		width: 10px
+		height: 100%
+		left: 0
+		top: 0
+		bottom: 0
+		border-radius: 15px 0px 0px 15px
+	.card-text
+		font-weight: bold
+
+.aside-card
+	padding: 30px 25px
+	background: #475D7E
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	border-radius: 15px
+	position: relative
+	margin-bottom: 20px
+.aside-card-label
+	position: absolute
+	top: 10px
+	right: 10px
+	font-weight: bold
+	font-size: 14px
+	line-height: 100%
+	padding: 8px 10px
+	background: #009846
+	border-radius: 5px
+.aside-card-date
+	font-weight: bold
+	font-size: 14px
+	line-height: 100%
+	color: rgba(255, 255, 255, 0.5)
+	margin-bottom: 36px
+.aside-card-text
+	line-height: 120%
+	margin-bottom: 0
+
+.news
+	color: #343D4A
+	background-color: #F4F6FB
+.news-inner
+	padding: 100px 0
+.news-header
+	display: flex
+	justify-content: space-between
+	margin-bottom: 40px
+	.slider-nav
+		display: flex
+		@include media-breakpoint-down(sm)
+			display: none
+	.h2
+		margin: 0
+.news-item
+	padding: 30px
+	background: #FFFFFF
+	border: 1px solid #D3D9E8
+	border-radius: 15px
+.news-item-date
+	font-weight: bold
+	font-size: 16px
+	line-height: 100%
+	color: #81899B
+.news-item-text
+	font-weight: bold
+	font-size: 20px
+	line-height: 140%
+.news-nav
+	display: flex
+.all-news
+	display: flex
+	align-items: center
+	margin-right: 30px
+	@include media-breakpoint-down(sm)
+		margin-right: 0
+	a
+		color: #475D7E
+		&:hover
+			text-decoration: none
+			color: #1D2229
+
+.slider-nav-mobile
+	display: none
+	margin-top: 30px
+	@include media-breakpoint-down(sm)
+		display: flex
+		justify-content: center
+
+.swiper-pagination, .swiper-button-next, .swiper-button-prev
+	position: static
+
+.swiper-pagination
+	color: #475D7E
+	padding-top: 8px
+	width: auto
+	margin-left: 15px
+	margin-right: 15px
+
+.swiper-button-next, .swiper-button-prev
+	border: 1px solid #D3D9E8
+	color: #475D7E
+	box-sizing: border-box
+	border-radius: 5px
+	width: 50px
+	height: 50px
+	margin: 0
+	transition: all 0.3s ease
+	&::after
+		font-size: 20px
+	&:hover
+		background: #475D7E
+		color: #fff
+
+.footer
+	padding-top: 100px
+	@include media-breakpoint-down(sm)
+		padding-top: 50px
+	.h3
+		margin-bottom: 50px
+		@include media-breakpoint-down(sm)
+			display: none
+	.contacts
+		display: flex
+		padding-bottom: 50px
+		border-bottom: 1px solid rgba(211, 217, 232, 0.5)
+		@include media-breakpoint-down(sm)
+			flex-direction: column
+			align-items: center
+			padding-bottom: 25px
+		.contacts-item
+			margin-right: 50px
+			display: flex
+			@include media-breakpoint-down(sm)
+				margin-right: 0
+			.contact-icon
+				margin-right: 10px
+	.footer-bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 20px
+		padding-bottom: 60px
+		@include media-breakpoint-down(lg)
+			flex-direction: column
+		.copyright
+			display: flex
+			align-items: center
+			color: #475D7E
+			font-weight: normal
+			font-size: 14px
+			line-height: 100%
+			@include media-breakpoint-down(lg)
+				order: 2
+			@include media-breakpoint-down(sm)
+				flex-direction: column
+			.copyright-item
+				margin-bottom: 0
+				&:not(:last-child)
+					margin-right: 30px
+					@include media-breakpoint-down(sm)
+						margin-right: 0
+						margin-bottom: 10px
+				a
+					color: #475D7E
+					text-decoration: underline
+					transition: all 0.3s ease
+					&:hover
+						color: #343D4A
+		.partners
+			display: flex
+			@include media-breakpoint-down(lg)
+				margin-bottom: 40px
+				margin-top: 20px
+			.partners-item
+				margin-left: 40px
+				display: flex
+				align-items: center
